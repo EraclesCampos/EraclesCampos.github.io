@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario 2</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="logo.png" alt="logo" width="70px" height="60px">
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Acerca de gocu</a>
+            <a href="#">Mas proyectos</a>
+            <a href="#">Salir</a>
+        </nav>
+    </header>
+    <div>
+        <audio class="audio" src="audio.m4a" type="audio/mpeg"></audio>
+        <img src="img.jpg" alt="imagen formulario" width="450px" class="imagen">
+        <form action="">
+            <h1>Formulario insano de gocu</h1>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre/s">
+            <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
+            <input type="email" name="email" id="email" placeholder="Correo">
+            <input type="password" name="contrasena" placeholder="Contraseña" id="contrasena">
+            <input type="submit" value="Enviar" class="boton">
+        </form>
+    </div>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        header{
+            background-color: brown;
+            display: flex;
+            height: 100px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo  {
+            position: relative;
+            left: 30px;
+        }
+        nav{
+            display: flex;
+            width: 50%;
+            justify-content: space-evenly;
+            position: relative;
+        }
+        a{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+            transition: transform .5s ease;
+        }
+        a:hover{
+            transform: scale(1.2);
+            color:rgb(231, 161, 110);
+        }
+        div{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 50px 50px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 400px;
+            width: 400px;
+            background: linear-gradient(to bottom, rgb(231, 161, 110),chocolate);
+            padding: 50px;
+            text-align: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 9px;
+            border: 5px solid brown;
+        }
+
+        input{
+            height: 25px;
+            width: 100%;
+            max-width: 400px;
+            border-style: none;
+            border-radius: 7px;
+            background-color: rgb(193, 111, 111);
+            color: rgb(0, 0, 0);
+            
+        }
+        .boton{
+            position: relative;
+            width: 200px;
+            height: 40px;
+            background-color: brown;
+            top: 20px;
+        }
+        .boton:hover{
+            background-color: rgb(193, 111, 111);
+            transition: .5s;
+            cursor: pointer;
+        }
+        ::-webkit-input-placeholder {
+            color: rgba(0, 0, 0, 0.5);
+            position: relative;
+            left: 10px;
+            opacity: 1;
+            transition: 0.3s;
+        }
+        input:focus::-webkit-input-placeholder{
+            opacity: 0;
+        }
+        input:focus{
+            outline: none;
+            border-bottom: 3px solid brown;
+        }
+        .imagen{
+            border-radius: 20px;
+            border: 2px solid black;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        @media(max-width:1000px) {
+            .imagen{
+                display: none;
+            }
+            
+        } 
+    </style>
+    <script>
+        var audio = document.querySelector("audio")
+        var img = document.querySelector(".imagen");
+        img.addEventListener("click",function(){
+        if (audio.paused){
+            audio.play();
+        }
+        else{
+            audio.play();
+            audio.currentTime = 0;
+        }
+        });
+    </script>
+</body>
+</html>
