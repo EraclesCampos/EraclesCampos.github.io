@@ -39,6 +39,7 @@ header{
     flex-direction: column;
     justify-content: space-evenly;
     cursor: pointer;
+    user-select: none;
 }
 .barra{
     width: 70%;
