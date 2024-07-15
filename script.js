@@ -10,10 +10,19 @@ let header_oculto = true; // Cambiado a true para ocultar por defecto en pantall
 // Funcion para mover la foto y el texto
 containerClickme.addEventListener('click', function () {
     if (!movido) {
-        imagen_eracles.style.transform = 'translateX(-200px)';
-        containerClickme.style.transform = 'translateX(-200px)';
-        texto_eracles.classList.add('texto-visible');
-        texto_eracles.style.right = '0';
+        if(window.innerWidth < 930){
+            imagen_eracles.style.transform = 'translateY(200px) scale(.5)';
+            containerClickme.style.transform = 'translateY(200px) scale(.5)';
+            texto_eracles.classList.add('texto-visible');
+            texto_eracles.style.right = '0';    
+        }
+        else{
+            imagen_eracles.style.transform = 'translateX(-200px)';
+            containerClickme.style.transform = 'translateX(-200px)';
+            texto_eracles.classList.add('texto-visible');
+            texto_eracles.style.right = '0';  
+        }
+       
     } else {
         imagen_eracles.style.removeProperty('transform');
         containerClickme.style.removeProperty('transform');
