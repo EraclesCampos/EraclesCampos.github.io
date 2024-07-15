@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,18 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/4f703b2a65.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header>
+    <header id="header">
         <nav id="navbar">
+            <div class="tres-barras">
+                <div class="barra"></div>
+                <div class="barra"></div>
+                <div class="barra"></div>
+            </div>
             <ul>
                 <li><a href="#welcome-section">Acerca de mi</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#projects">Proyectos</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
@@ -21,36 +29,79 @@
         <h1 class="welcome-text">
             Hola, soy Eracles Campos
         </h1>
-        <p>&lt;Desarrollador web/&gt;</p>
-    </section>    
+        <p class="desarrollador-web">&lt;Desarrollador web/&gt;</p>
+        <div class="contenedor-imagen-texto">
+            <div class="container-clickme" id="container-clickme">
+                <p id="clickme" class="clickme">Click me!</p>
+            </div>
+            <img class="foto-eracles" id='foto-eracles' src="img-welcome.jpg" alt="foto de eracles" width="300px">
+            <div class="contenedor-texto">
+                <p id="texto-eracles" class="texto-eracles">Hola, soy Eracles Campos Zavala, tengo 19 años y estudio
+                    Ingeniería en Sistemas Computacionales en el Tecnológico Universitario de Aguascalientes (TUA). Me
+                    apasiona la programación y el desarrollo web. Actualmente, estoy aprendiendo front-end y apunto a
+                    convertirme en un desarrollador full-stack en el futuro.</p>
+            </div>
+        </div>
+    </section>
+    <section id="habilidades" class="habilidades">
+        <h1>Habilidades</h1>
+        <div class="container-logos">
+            <div class="targetas-logos">
+                <img class="logos" src="html.png" alt="html">
+                <p>HTML 5</p>
+            </div>
+            <div class="targetas-logos">
+                <img class="logos" src="css-3.png" alt="css">
+                <p>CSS 3</p>
+            </div>
+            <div class="targetas-logos">
+                <img class="logos" src="git.png" alt="git">
+                <p>Git</p>
+            </div>
+            <div class="targetas-logos">
+                <img class="logos" src="github.png" alt="github">
+                <p>Github</p>
+            </div>
+            <div class="targetas-logos">
+                <img class="logos" src="sql.png" alt="sql">
+                <p>SQL</p>
+            </div>
+        </div>
+
+    </section>
     <section id="projects" class="projects">
         <h1>Mis proyectos insanos</h1>
         <div class="container-links">
-            <a id="project-tile" href="calculadora/index.html" class="links-proyectos project-tile" target="_blank" >
+            <a id="project-tile" href="calculadora/index.html" class="links-proyectos project-tile" target="_blank">
                 <img src="calculadora/image.png" alt="" width="100%">
                 <p>Calculadora JavaScript</p>
             </a>
-            <a id="project-tile" href="practica 2/index.html" class="links-proyectos" target="_blank" >
+            <a id="project-tile" href="practica 2/index.html" class="links-proyectos" target="_blank">
                 <img src="practica 2/image.png" alt="" width="100%">
                 <p>Formulario insano de gocu</p>
             </a>
-            <a id="project-tile" href="Piano/index.html" class="links-proyectos" target="_blank" >
+            <a id="project-tile" href="Piano/index.html" class="links-proyectos" target="_blank">
                 <img src="Piano/image.png" alt="" width="100%">
                 <p>Piano insano</p>
-            </a>    
+            </a>
         </div>
     </section>
     <section class="contact" id="contact">
         <h1>Contacto</h1>
         <ul class="contact-list">
-            <li><a id="profile-link" target="_blank" href="https://github.com/EraclesCampos"><i class="fab fa-github"></i>GitHub</a></li>
+            <li><a id="profile-link" target="_blank" href="https://github.com/EraclesCampos"><i
+                        class="fab fa-github"></i>GitHub</a></li>
             <li><a href="mailto:camposzavalaeracles.com"><i class="fa-solid fa-envelope"></i>Email</a></li>
             <li><a href="tel:+524495708664"><i class="fas fa-mobile-alt"></i>LLamame</a></li>
+            <li><a href="www.linkedin.com/in/eracles-campos-zavala-298048245"><i
+                        class="fa-brands fa-linkedin"></i>Linkedin</a></li>
         </ul>
     </section>
     <footer>
-        <p>Este es un portafolio xd</p>
-        <p>© creado por Eracles Campos</p>
+        <p>Este portafolio fue creado con pasión y dedicación.</p>
+        <p>© 2024 Eracles Campos Zavala</p>
     </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
