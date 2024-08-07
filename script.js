@@ -5,7 +5,7 @@ const containerClickme = document.getElementById('container-clickme');
 const header = document.getElementById('header');
 const barras = document.querySelector('.tres-barras');
 let movido = false;
-let header_oculto = true; // Cambiado a true para ocultar por defecto en pantallas pequeñas
+let header_oculto = true;
 
 // Funcion para mover la foto y el texto
 containerClickme.addEventListener('click', function () {
@@ -80,3 +80,21 @@ window.addEventListener('resize', function () {
         header_oculto = false; // No ocultar el header en pantallas grandes
     }
 });
+
+// --Efecto de scroll--
+const elements = document.querySelectorAll('.animate');
+
+    const checkVisibility = () => {
+        const windowHeight = window.innerHeight;
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            if (elementTop < windowHeight - 200) {  // Adjust 100 to change when animation starts
+                element.classList.add('visible');
+            } else {
+                element.classList.remove('visible');
+            }
+        });
+    };
+
+window.addEventListener('scroll', checkVisibility);
+checkVisibility();  // Check visibility on page load

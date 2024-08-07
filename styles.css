@@ -252,6 +252,9 @@ nav li a:hover::after{
 /* -------------------Contact------------------- */
 .contact{
     background-color: var(--fondo-negro);
+    
+}
+.contact .div_contact{
     height: calc(100vh - 11vh);
     display: flex;
     flex-direction: column;
@@ -307,6 +310,17 @@ footer p{
     margin: 0 20px;
 }
 
+/* -------------------Animaciones------------------- */
+.animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 /*------------------- media querys -------------------*/
 
 /* navbar */
