@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <h3>CUBiks</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Rubik%27s_cube.svg/640px-Rubik%27s_cube.svg.png" alt="Logo de rubik" id="header-img">
+        <nav id="nav-bar">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="barra">
+                <img src="/media/barra-de-menus.png" alt="Menú">
+            </label>            
+            <ul>
+                <li><a class="nav-link" href="#form">Formulario</a></li>
+                <li><a class="nav-link" href="#video">Video</a></li>
+                <li><a class="nav-link" href="#precios">Productos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="form">
+            <form id="form" action="">
+                <h3>Registrate para recibir ofertas</h3>
+                <input id="email" type="email" name="email" placeholder="Email">
+                <input id="submit" type="submit" value="Enviar">
+            </form>
+        </section>
+        <section class="video">
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/GyY0OxDk5lI?si=Tm7nyUGvmWD75qgD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <h2>Productos</h2>
+        <section class="targetas" id="precios">
+            <div class="targeta">
+                <h3>Cubo 2x2</h3>
+                <img src="https://static.wixstatic.com/media/603660_a7c9a03d115a4507972b73cf0d768266~mv2.png/v1/fill/w_500,h_500,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/22a.png" alt="Cubo 2x2">
+                <p>$130</p>
+                <button>Comprar</button>
+            </div>
+            <div class="targeta">
+                <h3>Cubo 3x3</h3>
+                <img src="/pagina de producto/Product page/media/cube3x3.png" alt="Cubo 3x3">
+                <p>$200</p>
+                <button>Comprar</button>
+            </div>
+            <div class="targeta">
+                <h3>Cubo Espejo</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Mirror_Cube_solved.png" alt="">
+                <p>$230</p>
+                <button>Comprar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="links">
+            <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Contact</a>
+        </div>
+        <div class="terms">Copyright 2024, Original CUBiks</div>
+    </footer>
+</body>
+</html>

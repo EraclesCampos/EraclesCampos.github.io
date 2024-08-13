@@ -45,7 +45,7 @@ barras.addEventListener('click', function (e) {
     header_oculto = !header_oculto;
 });
 
-// Verificar si el ancho de la pantalla es el correcto para ocultar el header cuando se hacen clics fuera del header
+// Verificar si el ancho de la pantalla es el correcto para ocultar el header cuando se hacen clicks fuera del header
 document.addEventListener('click', function (e) {
     if (window.innerWidth < 576) {
         const clickfuera = barras.contains(e.target) || header.contains(e.target);
@@ -88,7 +88,7 @@ const elements = document.querySelectorAll('.animate');
         const windowHeight = window.innerHeight;
         elements.forEach(element => {
             const elementTop = element.getBoundingClientRect().top;
-            if (elementTop < windowHeight - 200) {  // Adjust 100 to change when animation starts
+            if (elementTop < windowHeight - 200) { 
                 element.classList.add('visible');
             } else {
                 element.classList.remove('visible');
@@ -97,4 +97,46 @@ const elements = document.querySelectorAll('.animate');
     };
 
 window.addEventListener('scroll', checkVisibility);
-checkVisibility();  // Check visibility on page load
+checkVisibility();
+
+
+// --Navbar--
+const links = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section'); // Asumiendo que cada sección tiene un elemento <section>
+
+function handleIntersection(entries) {
+    console.log(entries)
+    entries.forEach(entry => {
+        const id = entry.target.getAttribute('id');
+        const link = document.querySelector(`.nav-link[href="#${id}"]`);
+        
+        if (entry.isIntersecting) {
+            links.forEach(link => link.classList.remove('focused'));
+            if (link) link.classList.add('focused');
+        }
+    });
+}
+
+// Configurar IntersectionObserver
+const observer = new IntersectionObserver(handleIntersection, {
+    root: null, // Usar el viewport
+    rootMargin: '0px',
+    threshold: 0.5 // Cambiar según el porcentaje de intersección necesario
+});
+
+// Observar cada sección
+sections.forEach(section => {
+    observer.observe(section);
+});
+
+// // Actualizar coordenadas
+// const coordenadas = document.querySelector('.coordenadas');
+
+// function actualizarCoordenadas() {
+//     const coordenadasX = window.scrollX;
+//     const coordenadasY = window.scrollY;
+//     coordenadas.innerHTML = `X = <b>${coordenadasX}</b><br>Y = <b>${coordenadasY}</b>`;
+// }
+
+// actualizarCoordenadas();
+// window.addEventListener('scroll', actualizarCoordenadas);

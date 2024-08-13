@@ -17,6 +17,15 @@ body{
     display: none!important;
 }
 
+.coordenadas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: blue;
+    color: white;
+    z-index: 200;
+}
+
 /* navbar */
 header{
     display: flex;
@@ -48,12 +57,10 @@ header{
     margin-left: 4px;
 }
 nav{
-    width: 40%;
 }
 nav ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     font-family: sans-serif;
     font-weight: bold;
     padding: 0;
@@ -62,27 +69,16 @@ nav ul{
 nav li{
     list-style: none;
 }
-nav li a{
+.nav-link{
     display: block;
-    position: relative;
     color: white;
     text-decoration: none;
-    padding: 20px 5px;
+    padding: 20px 20px;
+    transition: all 0.5s;
 }
-nav li a::after{
-    content: '';
-    position: absolute;
-    background: rgb(95, 31, 31);
-    width: 100%;
-    height: 3px;
-    border-radius: 5px;
-    left: 0;
-    bottom: 17px;
-    transform: scaleX(0);
-    transition: transform .5s;
-}
-nav li a:hover::after{
-    transform: scaleX(1);
+.nav-link:focus, .nav-link.focused{
+    background-color: #791515;
+    border-radius: 10px 10px 0 0;
 }
 
 /* -------------------welcome-section------------------- */
@@ -186,7 +182,7 @@ nav li a:hover::after{
 }
 .container-logos{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
 }
 .habilidades h1{
     text-align: center;
@@ -197,6 +193,10 @@ nav li a:hover::after{
 }
 .logos{
     width: 50%;
+    transition: filter .3s;
+}
+.logos:hover{
+    filter: drop-shadow(0 0 10px white);
 }
 .targetas-logos{
     text-align: center;
@@ -238,6 +238,7 @@ nav li a:hover::after{
     color: white;
     box-shadow: 0 10px 15px rgb(0, 0, 0);
     transition: transform .3s ease;
+    text-align: center;
 }
 .container-links a:hover{
     transform: scale(1.1);
@@ -247,6 +248,9 @@ nav li a:hover::after{
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    background-color: rgb(54, 67, 97);
+}
+.img-cubo{
 }
 
 /* -------------------Contact------------------- */
@@ -272,7 +276,7 @@ nav li a:hover::after{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 50%;
+    width: 70%;
     gap: 30px;
 }
 .contact ul li{
@@ -325,17 +329,10 @@ footer p{
 
 /* navbar */
 @media(width < 950px){
-    nav{
-        width: 70%;
-    }
-    nav li a{
+    .nav-link{
         padding: 30px;
     }
-}
-@media(width < 820px){
-    nav{
-        width: 100%;
-    }
+    
 }
 @media(width < 576px){
     header{
@@ -344,10 +341,15 @@ footer p{
         transform: translateX(-40vw);
         transition: all 0.4s ease;
     }
+    nav{
+        width: 100%;
+    }
     nav ul{
         flex-direction: column;
     }
-    
+    .nav-link:focus, .nav-link.focused{
+        border-radius: 0;
+    }
 }
 
 
