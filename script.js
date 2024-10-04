@@ -7,6 +7,14 @@ const barras = document.querySelector('.tres-barras');
 let movido = false;
 let header_oculto = true;
 
+let edad = 19
+let mes = new Date().getMonth()
+let dia = new Date().getDate()
+document.querySelector(".edad").innerHTML = edad
+if(mes == 10 && dia == 25){
+    edad++;
+}
+
 // Funcion para mover la foto y el texto
 containerClickme.addEventListener('click', function () {
     if (!movido) {
@@ -109,7 +117,7 @@ function handleIntersection(entries) {
     entries.forEach(entry => {
         const id = entry.target.getAttribute('id');
         const link = document.querySelector(`.nav-link[href="#${id}"]`);
-        
+         
         if (entry.isIntersecting) {
             links.forEach(link => link.classList.remove('focused'));
             if (link) link.classList.add('focused');
