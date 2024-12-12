@@ -7,13 +7,6 @@ const barras = document.querySelector('.tres-barras');
 let movido = false;
 let header_oculto = true;
 
-let edad = 19
-let mes = new Date().getMonth()
-let dia = new Date().getDate()
-document.querySelector(".edad").innerHTML = edad
-if(mes == 10 && dia == 25){
-    edad++;
-}
 
 // Funcion para mover la foto y el texto
 containerClickme.addEventListener('click', function () {
@@ -110,7 +103,7 @@ checkVisibility();
 
 // --Navbar--
 const links = document.querySelectorAll('.nav-link');
-const sections = document.querySelectorAll('section'); // Asumiendo que cada sección tiene un elemento <section>
+const sections = document.querySelectorAll('section');
 
 function handleIntersection(entries) {
     console.log(entries)
@@ -127,9 +120,9 @@ function handleIntersection(entries) {
 
 // Configurar IntersectionObserver
 const observer = new IntersectionObserver(handleIntersection, {
-    root: null, // Usar el viewport
+    root: null, 
     rootMargin: '0px',
-    threshold: 0.5 // Cambiar según el porcentaje de intersección necesario
+    threshold: 0.5 
 });
 
 // Observar cada sección
