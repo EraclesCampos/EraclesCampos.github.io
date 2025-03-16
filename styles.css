@@ -9,6 +9,10 @@
     --fondo-rojo: rgb(173, 36, 36);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: rgb(185, 181, 181);
 }
