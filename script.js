@@ -129,15 +129,3 @@ const observer = new IntersectionObserver(handleIntersection, {
 sections.forEach(section => {
     observer.observe(section);
 });
-
-// // Actualizar coordenadas
-// const coordenadas = document.querySelector('.coordenadas');
-
-// function actualizarCoordenadas() {
-//     const coordenadasX = window.scrollX;
-//     const coordenadasY = window.scrollY;
-//     coordenadas.innerHTML = `X = <b>${coordenadasX}</b><br>Y = <b>${coordenadasY}</b>`;
-// }
-
-// actualizarCoordenadas();
-// window.addEventListener('scroll', actualizarCoordenadas);
