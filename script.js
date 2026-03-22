@@ -129,3 +129,8 @@ const observer = new IntersectionObserver(handleIntersection, {
 sections.forEach(section => {
     observer.observe(section);
 });
+
+// Footer
+const copyDate = document.querySelector('.copy-date');
+const currentYear = new Date().getFullYear();
+copyDate.textContent = currentYear;
