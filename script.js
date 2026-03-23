@@ -34,6 +34,8 @@ containerClickme.addEventListener('click', function () {
     movido = !movido;
 });
 
+setTimeout(() => containerClickme.click(), 1500); //mostrar el texto automaticamente despues de 1.5 segundos
+
 // funcion para ocultar el header
 barras.addEventListener('click', function (e) {
     e.stopPropagation(); // Prevenir que el evento se propague al document
